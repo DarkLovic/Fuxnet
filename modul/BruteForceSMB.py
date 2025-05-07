@@ -1,3 +1,5 @@
+# Author: FAZ-28 
+# Description: module for brute force smb
 from impacket.smbconnection import SMBConnection
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
