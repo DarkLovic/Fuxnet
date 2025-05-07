@@ -14,17 +14,12 @@
 
 - Complete logging of activity to file
 ---
-## How to Run
-- Format Combo List
-- The combo file must be a user:pass list in the following format:
-```bash
-admin:admin123
-username:password
-```
-### Basic Usage
-```bash
-python3 Fuxnet.py <protocol> --target <ip/host> --combos <file>
-```
 ### Complete Options List
-- protocol	Protokol target (ftp, ssh, telnet, rdp, smb, http)
-- --target IP or target hostname
+```bash
+protocol  	Protokol target (ftp, ssh, telnet, rdp, smb, http)
+--target    IP or target hostname
+--port      Target port (optional, default based on protocol)
+--combos    Path ke file combo user:pass
+--http-url  URL form login (khusus HTTP)
+Nama field password (default: password)
+--http-user-field 
