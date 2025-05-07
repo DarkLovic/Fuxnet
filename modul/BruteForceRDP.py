@@ -1,3 +1,5 @@
+# Author: FAZ-28 
+# Description: module for brute force rdp
 import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
