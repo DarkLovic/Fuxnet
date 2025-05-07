@@ -25,3 +25,6 @@ username:password
 ```bash
 python3 Fuxnet.py <protocol> --target <ip/host> --combos <file>
 ```
+### Complete Options List
+- protocol	Protokol target (ftp, ssh, telnet, rdp, smb, http)
+- --target IP or target hostname
