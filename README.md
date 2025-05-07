@@ -16,61 +16,21 @@
 ---
 ### Complete Options List
 ```bash
-protocol  	     Protokol target (ftp, ssh, telnet, rdp, smb, http)
---target             IP or target hostname
---port               Target port (optional, default based on protocol)
---combos             Path to user:pass combo file
---http-url           URL form login (khusus HTTP)
---http-user-field    Name field password (default: password)
---http-success-key   Keywords in the response that indicate successful login
---max-workers        Maximum number of threads (default: 10)
---max-errors         Maximum number of errors before stopping (default: 10)
---output	     Prefix name file output (default: output)
---save               Save the results to a file
---output-format	     Format output: json, csv, both, console
---logfile.           File log (default: brute.log)
---use-proxy          Enable SOCKS5 proxy
---proxy-port	     Port proxy (default: 1080)
-```
-# Basic Usage:
-```bash
-python3 Fuxnet.py <protocol> --target <ip/host> --combos <name and path file>
-```
-# The path is like this:
-```bash
-combos/ftp.txt
-combos/http.txt
-combos/telnet.txt
-combos/ssh.txt
-combos/smb.txt
-combos/rdp.txt
-```
-# Example command 
-- ftp
-```bash
-python3 Fuxnet.py ftp --target 192.168.1.10 --combos combos/ftp.txt
-```
-- ssh
-```bash
-python3 Fuxnet.py ssh --target ssh.example.com --combos combos/ssh.txt
-```
-- telnet
-```bash
-python Fuxnet.py telnet --target 192.168.0.1 --combos combos/telnet.txt
-```
-- rdp
-```bash
-python Fuxnet.py rdp --target 192.168.0.1 --combos combos/rdp.txt
-```
-- smb
-```bash
-python Fuxnet.py smb --target 192.168.0.1 --combos combos/smb.txt
-```
-- http
-- For the HTTP protocol, you must also include:
-
-- --http-url
-
-- --http-success-key
-```bash
-python Fuxnet.py http --target 192.168.0.1 --combos combos/http.txt --http-url http://192.168.0.1/login --http-success-key "Welcome"
+| Argument                   | Description                                                             |
+| -------------------------- | ----------------------------------------------------------------------- |
+| `protocol`                 | Target protocol: `ftp`, `ssh`, `telnet`, `rdp`, `smb`, `http`           |
+| `-t`, `--target`           | IP address or hostname of the target                                    |
+| `-p`, `--port`             | Target port (optional, defaults based on protocol)                      |
+| `-c`, `--combos`           | Path to combo list file (`username:password`)                           |
+| `-u`, `--http-url`         | Login form URL (required for HTTP protocol)                             |
+| `--uf`                     | HTTP form field name for **username** (default: `username`)             |
+| `--pf`                     | HTTP form field name for **password** (default: `password`)             |
+| `-k`, `--http-success-key` | Keyword in HTTP response indicating successful login                    |
+| `-w`, `--max-workers`      | Max concurrent threads (default: `10`)                                  |
+| `-e`, `--max-errors`       | Max number of errors before stopping (default: `10`)                    |
+| `-o`, `--output`           | Output file name prefix (default: `output`)                             |
+| `-s`, `--save`             | Save valid credentials to file                                          |
+| `--fmt`                    | Output format: `json`, `csv`, `both`, or `console` (default: `console`) |
+| `-l`, `--logfile`          | Log file name (default: `brute.log`)                                    |
+| `--px`                     | Enable SOCKS5 proxy server                                              |
+| `--pp`                     | SOCKS5 proxy port (default: `1080`)                                     |
