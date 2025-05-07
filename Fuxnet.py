@@ -36,22 +36,21 @@ def save_result_csv(data, output_prefix):
 def main():
     parser = argparse.ArgumentParser(description="Multi-protocol brute force tool")
     parser.add_argument("protocol", choices=["ftp", "ssh", "telnet", "rdp", "smb", "http"], help="Protocol to use")
-    parser.add_argument("--target", required=True, help="Target IP or hostname")
-    parser.add_argument("--port", type=int, help="Target port")
-    parser.add_argument("--combos", required=True, help="Path to combo list (user:pass)")
-    parser.add_argument("--http-url", help="Login form URL for HTTP")
-    parser.add_argument("--http-user-field", default="username")
-    parser.add_argument("--http-pass-field", default="password")
-    parser.add_argument("--http-success-key", help="Keyword indicating login success")
-    parser.add_argument("--max-workers", type=int, default=10)
-    parser.add_argument("--max-errors", type=int, default=10)
-    parser.add_argument("--output", default="output")
-    parser.add_argument("--save", action="store_true", help="Save results to file (JSON/CSV)")
-    parser.add_argument("--output-format", choices=["json", "csv", "both", "console"], default="console",
-                        help="Format to save output (default: console only)")
-    parser.add_argument("--logfile", default="brute.log")
-    parser.add_argument("--use-proxy", action="store_true", help="Enable SOCKS5 proxy server")
-    parser.add_argument("--proxy-port", type=int, default=1080, help="SOCKS5 proxy port (default: 1080)")
+    parser.add_argument("-t", "--target", required=True, help="Target IP or hostname")
+    parser.add_argument("-p", "--port", type=int, help="Target port")
+    parser.add_argument("-c", "--combos", required=True, help="Path to combo list (user:pass)")
+    parser.add_argument("-u", "--http-url", help="Login form URL for HTTP")
+    parser.add_argument("--uf", dest="http_user_field", default="username", help="HTTP username field")
+    parser.add_argument("--pf", dest="http_pass_field", default="password", help="HTTP password field")
+    parser.add_argument("-k", "--http-success-key", help="Keyword indicating login success")
+    parser.add_argument("-w", "--max-workers", type=int, default=10)
+    parser.add_argument("-e", "--max-errors", type=int, default=10)
+    parser.add_argument("-o", "--output", default="output")
+    parser.add_argument("-s", "--save", action="store_true", help="Save results to file (JSON/CSV)")
+    parser.add_argument("--fmt", dest="output_format", choices=["json", "csv", "both", "console"], default="console")
+    parser.add_argument("-l", "--logfile", default="brute.log")
+    parser.add_argument("--px", dest="use_proxy", action="store_true", help="Enable SOCKS5 proxy server")
+    parser.add_argument("--pp", dest="proxy_port", type=int, default=1080, help="SOCKS5 proxy port")
 
     args = parser.parse_args()
 
@@ -113,4 +112,5 @@ def main():
         logging.info("No valid credentials found.")
 
 if __name__ == "__main__":
-    main()        
+    main()
+    
