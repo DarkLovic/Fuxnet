@@ -62,3 +62,15 @@ python Fuxnet.py telnet --target 192.168.0.1 --combos combos/telnet.txt
 ```bash
 python Fuxnet.py rdp --target 192.168.0.1 --combos combos/rdp.txt
 ```
+- smb
+```bash
+python Fuxnet.py smb --target 192.168.0.1 --combos combos/smb.txt
+```
+- http
+- For the HTTP protocol, you must also include:
+
+- --http-url
+
+- --http-success-key
+```bash
+python Fuxnet.py http --target 192.168.0.1 --combos combos/http.txt --http-url http://192.168.0.1/login --http-success-key "Welcome"
