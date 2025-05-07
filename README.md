@@ -13,3 +13,9 @@
 - Flexible output: console, json, csv, or both
 
 - Complete logging of activity to file
+---
+## How to Run
+- Format Combo List
+- The combo file must be a user:pass list in the following format: admin:admin123
+user:test
+...
