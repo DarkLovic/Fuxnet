@@ -1,5 +1,5 @@
 # Author: FAZ-28 
-# Description: brute force module for telnet
+# Description: module for brute force telnet
 import telnetlib
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
