@@ -32,7 +32,16 @@ protocol  	     Protokol target (ftp, ssh, telnet, rdp, smb, http)
 --use-proxy          Enable SOCKS5 proxy
 --proxy-port	     Port proxy (default: 1080)
 ```
-# Basic Usage
+# Basic Usage:
 ```bash
 python3 Fuxnet.py <protocol> --target <ip/host> --combos <name and path file>
+```
+# The path is like this:
+```bash
+combos/ftp.txt
+combos/http.txt
+combos/telnet.txt
+combos/ssh.txt
+combos/smb.txt
+combos/rdp.txt
 ```
