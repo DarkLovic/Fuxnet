@@ -28,7 +28,6 @@ protocol  	     Protokol target (ftp, ssh, telnet, rdp, smb, http)
 --output	     Prefix name file output (default: output)
 --save               Save the results to a file
 --output-format	     Format output: json, csv, both, console
---logfile
-File log (default: brute.log)
+--logfile.           File log (default: brute.log)
 --use-proxy          Enable SOCKS5 proxy
 --proxy-port	     Port proxy (default: 1080)
