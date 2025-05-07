@@ -1,5 +1,5 @@
-# ssh brute force module
-
+# Author: FAZ-28 
+# Description: module for brute force ssh
 import paramiko
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
