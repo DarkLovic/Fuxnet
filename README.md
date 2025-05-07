@@ -16,6 +16,7 @@
 ---
 ## How to Run
 - Format Combo List
-- The combo file must be a user:pass list in the following format: admin:admin123
-user:test
+- The combo file must be a user:pass list in the following format:
+* admin:admin123
+* username:password 
 ...
