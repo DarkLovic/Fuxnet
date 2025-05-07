@@ -14,7 +14,30 @@
 
 - Complete logging of activity to file
 ---
+
+# Example command:
+
+
+```bash
+python3 Fuxnet.py ftp -t <target> -c combos/ftp.txt
+python3 Fuxnet.py ssh -t <target> -c combos/ssh.txt
+python3 Fuxnet.py telnet -t <target> -c combos/telnet.txt
+python3 Fuxnet.py rdp -t <target> -c combos/rdp.txt
+python3 Fuxnet.py smb -t <target> -c combos/smb.txt
+```
+# For HTTP (needs additional parameters)
+```bash
+python3 Fuxnet.py http -t <target> -c combos/http.txt \
+-u http://target/login \
+-k "Welcome"
+```
+# Custom Port Usage Example:
+- for example for ssh 
+```bash
+python3 Fuxnet.py ssh -t 192.168.1.10 -p 2222 -c combos/ssh.txt
+```
 ### Complete Options List
+- you can add these commands too
 ```bash
 | Argument                   | Description                                                             |
 | -------------------------- | ----------------------------------------------------------------------- |
@@ -34,3 +57,4 @@
 | `-l`, `--logfile`          | Log file name (default: `brute.log`)                                    |
 | `--px`                     | Enable SOCKS5 proxy server                                              |
 | `--pp`                     | SOCKS5 proxy port (default: `1080`)                                     |
+```
