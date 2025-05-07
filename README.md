@@ -1,5 +1,7 @@
 # Fuxnet
-- Fuxnet is a modular brute force tool that supports various network protocols such as FTP, SSH, Telnet, RDP, SMB, and HTTP. It comes with SOCKS5 proxy support, logging, and the option to save results in JSON/CSV format.
+- Fuxnet is a modular brute force tool that supports various network protocols such as
+- FTP, SSH, Telnet, RDP, SMB, and HTTP. Equipped with SOCKS5 proxy support,
+- logging, as well as the option to save results in JSON/CSV format.
 ---
 ## Current Key Features 
 - Supported protocols: FTP, SSH, Telnet, RDP, SMB, HTTP
