@@ -1,8 +1,10 @@
 """
-Author: FAZ-28
-Copyright 2025 | Fuxnet Brute Force Tools
-"""
 
+Fuxnet — Network Brute Force Tools
+Author   : FAZ-28
+Copyright © 2025 FAZ-28. All rights reserved.
+
+"""
 import argparse
 import logging
 import os
