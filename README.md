@@ -19,5 +19,9 @@
 - The combo file must be a user:pass list in the following format:
 ```bash
 admin:admin123
-username:password 
-...
+username:password
+```
+### Basic Usage
+```bash
+python3 Fuxnet.py <protocol> --target <ip/host> --combos <file>
+```
