@@ -1,3 +1,5 @@
+# Author: FAZ-28 
+# Description: This module acts as a proxy 
 import socket
 import threading
 import struct
