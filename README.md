@@ -19,7 +19,7 @@
 protocol  	     Protokol target (ftp, ssh, telnet, rdp, smb, http)
 --target             IP or target hostname
 --port               Target port (optional, default based on protocol)
---combos             Path ke file combo user:pass
+--combos             Path to user:pass combo file
 --http-url           URL form login (khusus HTTP)
 --http-user-field    Name field password (default: password)
 --http-success-key   Keywords in the response that indicate successful login
@@ -34,5 +34,5 @@ protocol  	     Protokol target (ftp, ssh, telnet, rdp, smb, http)
 ```
 # Basic Usage
 ```bash
-python3 Fuxnet.py <protocol> --target <ip/host> --combos <file>
+python3 Fuxnet.py <protocol> --target <ip/host> --combos <name and path file>
 ```
