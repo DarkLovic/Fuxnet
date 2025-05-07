@@ -5,6 +5,7 @@ Author   : FAZ-28
 Copyright © 2025 FAZ-28. All rights reserved.
 
 """
+
 import argparse
 import logging
 import os
@@ -12,7 +13,7 @@ import json
 import csv
 from modul.BruteForceFTP import BruteForceFTP
 from modul.BruteForceSSH import BruteForceSSH
-from modul.BruteForceTalent import BruteForceTalent
+from modul.BruteForceTelnet import BruteForceTelnet
 from modul.BruteForceRDP import BruteForceRDP
 from modul.BruteForceSMB import BruteForceSMB
 from modul.BruteForceHTTP import BruteForceHTTP
@@ -34,7 +35,7 @@ def save_result_csv(data, output_prefix):
 
 def main():
     parser = argparse.ArgumentParser(description="Multi-protocol brute force tool")
-    parser.add_argument("protocol", choices=["ftp", "ssh", "talent", "rdp", "smb", "http"], help="Protocol to use")
+    parser.add_argument("protocol", choices=["ftp", "ssh", "telnet", "rdp", "smb", "http"], help="Protocol to use")
     parser.add_argument("--target", required=True, help="Target IP or hostname")
     parser.add_argument("--port", type=int, help="Target port")
     parser.add_argument("--combos", required=True, help="Path to combo list (user:pass)")
@@ -73,8 +74,8 @@ def main():
         module = BruteForceFTP(args.target, port or 21, combos, args.max_workers, args.max_errors)
     elif args.protocol == "ssh":
         module = BruteForceSSH(args.target, port or 22, combos, args.max_workers, args.max_errors)
-    elif args.protocol == "talent":
-        module = BruteForceTalent(args.target, port or 23, combos, args.max_workers, args.max_errors)
+    elif args.protocol == "telnet":
+        module = BruteForceTelnet(args.target, port or 23, combos, args.max_workers, args.max_errors)
     elif args.protocol == "rdp":
         module = BruteForceRDP(args.target, port or 3389, combos, args.max_workers, args.max_errors)
     elif args.protocol == "smb":
@@ -112,4 +113,4 @@ def main():
         logging.info("No valid credentials found.")
 
 if __name__ == "__main__":
-    main()
+    main()        
