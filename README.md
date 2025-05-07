@@ -16,9 +16,9 @@
 ---
 ### Complete Options List
 ```bash
-protocol  	        Protokol target (ftp, ssh, telnet, rdp, smb, http)
---target            IP or target hostname
---port              Target port (optional, default based on protocol)
+protocol  	         Protokol target (ftp, ssh, telnet, rdp, smb, http)
+--target             IP or target hostname
+--port               Target port (optional, default based on protocol)
 --combos             Path ke file combo user:pass
 --http-url           URL form login (khusus HTTP)
 --http-user-field    Name field password (default: password)
