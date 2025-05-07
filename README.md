@@ -16,10 +16,18 @@
 ---
 ### Complete Options List
 ```bash
-protocol  	Protokol target (ftp, ssh, telnet, rdp, smb, http)
---target    IP or target hostname
---port      Target port (optional, default based on protocol)
---combos    Path ke file combo user:pass
---http-url  URL form login (khusus HTTP)
-Nama field password (default: password)
---http-user-field 
+protocol  	        Protokol target (ftp, ssh, telnet, rdp, smb, http)
+--target            IP or target hostname
+--port              Target port (optional, default based on protocol)
+--combos             Path ke file combo user:pass
+--http-url           URL form login (khusus HTTP)
+--http-user-field    Name field password (default: password)
+--http-success-key   Keywords in the response that indicate successful login
+--max-workers        Maximum number of threads (default: 10)
+--max-errors         Maximum number of errors before stopping (default: 10)
+--output	           Prefix name file output (default: output)
+--save               Save the results to a file
+--output-format	     Format output: json, csv, both, console
+--logfile          	 File log (default: brute.log)
+--use-proxy          Enable SOCKS5 proxy
+--proxy-port	       Port proxy (default: 1080)
