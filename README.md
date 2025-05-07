@@ -31,3 +31,8 @@ protocol  	     Protokol target (ftp, ssh, telnet, rdp, smb, http)
 --logfile.           File log (default: brute.log)
 --use-proxy          Enable SOCKS5 proxy
 --proxy-port	     Port proxy (default: 1080)
+```
+# Basic Usage
+```bash
+python3 Fuxnet.py <protocol> --target <ip/host> --combos <file>
+```
