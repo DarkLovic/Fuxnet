@@ -1,5 +1,5 @@
-# ftp brute force module
-
+# Author: FAZ-28 
+# Description: module for brute force ftp
 import ftplib
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
