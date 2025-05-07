@@ -45,3 +45,20 @@ combos/ssh.txt
 combos/smb.txt
 combos/rdp.txt
 ```
+# Example command 
+- ftp
+```bash
+python3 Fuxnet.py ftp --target 192.168.1.10 --combos combos/ftp.txt
+```
+- ssh
+```bash
+python3 Fuxnet.py ssh --target ssh.example.com --combos combos/ssh.txt
+```
+- telnet
+```bash
+python Fuxnet.py telnet --target 192.168.0.1 --combos combos/telnet.txt
+```
+- rdp
+```bash
+python Fuxnet.py rdp --target 192.168.0.1 --combos combos/rdp.txt
+```
