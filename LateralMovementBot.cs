@@ -10,6 +10,8 @@ using System.Management;
 using System.Text;
 using System.Threading.Tasks;
 
+#pragma warning disable CA1416
+
 namespace BlackNevra
 {
     public class LateralMovementBot
@@ -137,8 +139,8 @@ namespace BlackNevra
                         }
                     }
 
-                    // Mengembalikan konteks ke pengguna asli
-                    WindowsIdentity.Impersonate(IntPtr.Zero);
+                    WindowsIdentity identity = new WindowsIdentity(hToken);
+                    identity.Impersonate();                    
                 }
                 finally
                 {
