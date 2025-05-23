@@ -20,13 +20,13 @@ jobs:
           dotnet-version: '6.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore Root/Latmov.csproj
+        run: dotnet restore Latmov.csproj
 
       - name: Build solution
-        run: dotnet build Root/Latmov.csproj -c Release
+        run: dotnet build Latmov.csproj -c Release
 
       - name: Publish self-contained executable
-        run: dotnet publish Root/Latmov.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o output
+        run: dotnet publish Latmov.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o output
   
       - name: Upload artifact (Latmov.exe)
         uses: actions/upload-artifact@v4
