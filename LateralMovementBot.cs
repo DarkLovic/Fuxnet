@@ -18,12 +18,12 @@ namespace BlackNevra
     {
         public class MovementResult
         {
-            public bool Success { get; set; }
-            public string TargetIp { get; set; }
-            public string Output { get; set; }
-            public string ErrorMessage { get; set; }
+            public bool Success { get; set; } = false;
+            public string TargetIp { get; set; } = string.Empty;
+            public string Output { get; set; } = string.Empty;
+            public string ErrorMessage { get; set; } = string.Empty;
         }
-
+        
         [DllImport("advapi32.dll", SetLastError = true)]
         private static extern bool OpenProcessToken(IntPtr ProcessHandle, uint DesiredAccess, out IntPtr TokenHandle);
 
